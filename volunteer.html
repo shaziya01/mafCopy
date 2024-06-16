@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        .overlay {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 1);
+            top: 0%;
+            z-index: -1;
+            transition: 1s;
+        }
+
+        .volunteerForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+        }
+
+        .volunteerForm form {
+            width: 532px;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            background: #fff;
+            box-shadow: 9px 30px 50px 0px rgba(0, 0, 0, 0.10);
+            margin: auto;
+            /* transition: 2s; */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .volunteerForm h1,
+        .volunteerForm p {
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        .volunteerForm label {
+            color: #666;
+        }
+
+        .volunteerForm input {
+            width: 100%;
+            height: 56px;
+            padding: 0px 16px 0px 18px;
+            border-radius: 16px;
+            border: 1px solid #E0E4EB;
+            background: #F6F7F9;
+            font-size: 16px;
+        }
+
+        .volunteerForm #optional {
+            display: flex;
+            width: 100%;
+            height: 149px;
+            padding: 18px 16px 0px 18px;
+            border-radius: 16px;
+            border: 1px solid #E0E4EB;
+            background: #F6F7F9;
+        }
+
+        .volunteerForm button {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            border: 2px solid #915C5D;
+            margin-top: 2.2rem;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .volunteerForm .form div {
+            padding: 0.7rem 0;
+        }
+
+        .volunteerForm span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #915C5D;
+            text-align: center;
+            color: white;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .overlay.hidden {
+            display: none;
+        }
+
+        .volunteerForm form.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .form-check {
+            display: flex;
+            gap: 13px;
+        }
+
+        .form-check input {
+            display: flex;
+            width: 15px;
+            height: 15px;
+            padding: 0px 16px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 32px;
+        }
+        .input-group .form-control{
+            display: flex;
+            
+        }
+
+        .form-check label {
+            color: #666;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        #secondForm button {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            background: #915C5D;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="volunteerForm">
+        <a href="../Home page/home.html">
+            <span>&times;</span>
+        </a>
+        <form action="" id="firstForm">
+            <div class="form">
+                <h1>Voluteer Signup</h1>
+                <p>Be a part of thoughtful initiatives by MRF</p>
+                <div>
+                    <label for="Name">Name</label>
+                    <input type="text" placeholder="Full name" name="" id="">
+                </div>
+                <div>
+                    <label for="phone">Mobile Number</label>
+                    <input type="text" placeholder="Phone" name="" id="">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Email address" name="" id="">
+                </div>
+                <div>
+                    <label for="profession">Profession</label>
+                    <input type="text" placeholder="eg: Software engineer" name="" id="">
+                </div>
+                <button type="button" onclick="showNextForm()">Next</button>
+            </div>
+        </form>
+
+        <form action="" id="secondForm" class="form hidden">
+            <h1>Voluteer Signup</h1>
+            <p>Be a part of thoughtful initiatives by MRF</p>
+            <div>
+                <label for="City & State">City & State</label>
+                <input type="text" placeholder="eg: Chicago" name="" id="">
+            </div>
+
+            <div class="input-group">
+                <label class="input-group-text">How can you help India hub? (Optional)</label>
+                <input class="form-control" type="text" placeholder="text goes here"></input>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">I am signing up to volunteer for India Hub</label>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showNextForm() {
+            document.getElementById("firstForm").classList.add("hidden");
+            document.getElementById("secondForm").classList.remove("hidden");
+        }
+    </script>
+</body>
+
+</html>

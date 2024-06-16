@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAF</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <!-- navbar starts  -->
+  <header>
+    <nav>
+      <div class="logo"><img src="../About page/assets/logo.png" alt=""></div>
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../About page/about.html">About</a></li>
+        <!-- <li><a href="#">Success Stories</a></li> -->
+        <li><a href="../OurTeam page/team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <a href="../Donate page/donate.html" class="DonateNow-btn">DONATE NOW</a>
+      <div class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+    <div class="dropdown-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../About page/about.html">About</a></li>
+      <!-- <li><a href="#">Success Stories</a></li> -->
+      <li><a href="../OurTeam page/team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="../Donate page/donate.html" class="DonateNow-btn">DONATE NOW</a></li>
+    </div>
+  </header>
+  <!-- navbar ends  -->
+  <!-- <div class="container">
+    <form action="" class="form" id="contactForm">
+      <h2>Contact Us</h2>
+      <div class="contact-section1">
+        <input type="text" name="firstName" class="box" placeholder="First Name" required>
+        <input type="text" name="lastName" class="box" placeholder="Last Name" required>
+        <input type="tel" name="phone" class="box" placeholder="Phone" inputmode="tel" pattern="[0-9]*" required>
+        <input type="email" name="email" class="box" placeholder="Email" required>
+      </div>
+      <div class="contact-section2">
+        <textarea id="message" name="message" class="box" placeholder="Message" ></textarea>
+      </div>
+      <div class="submit">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+    <div class="form-image">
+      <img id="form-image" src="crop-students-with-notebooks-textbooks 1.png" alt="">
+      <div class="below-image">
+        <div class="number">
+          <img id="call-svg" src="call.svg" alt="">
+          <div id="number">+91 900 441 7626</div>
+        </div>
+        <div class="email">
+          <img id="mail-svg" src="mail.svg" alt="">
+          <div id="email">missionawarness21@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const phoneInput = document.querySelector('input[name="phone"]');
+    const emailInput = document.querySelector('input[name="email"]');
+    const phoneRegex = /^[0-9]{10}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', function (event) {
+      let valid = true;
+
+      if (!phoneRegex.test(phoneInput.value)) {
+        alert('Please enter a valid phone number.');
+        valid = false;
+      }
+
+      if (!emailRegex.test(emailInput.value)) {
+        alert('Please enter a valid email address.');
+        valid = false;
+      }
+
+      if (!valid) {
+        event.preventDefault();
+      }
+    });
+  </script>
+
+  <!-- <div class="container-2">
+    <div class="map">
+      <iframe id="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.17504088184!2d72.88585137406189!3d19.099975451221702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9930f442225%3A0x7f9aeec76a1e483f!2sRadiance%20Academy!5e0!3m2!1sen!2sin!4v1700821069796!5m2!1sen!2sin"
+        width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="address">
+      <div id="office-location">Office Location</div>
+      <div id="full-address">#11, New Modern
+        Society,Lokmanya Tilak Nagar 90
+        Feet Road, Sakinaka, Mumbai
+        400072</div>
+      <div id="find-map">Find in On Map
+        <hr id="hr">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- section_one started -->
+  <div class="MainForSec1-2">
+  <div class="section1">
+    <div class="sec1-leftCol">
+      <p id="section1-contact">Contact</p>
+      <p id="section1-getInTouch">Get In Touch</p>
+      <p id="section1-para">Use the form below to get in touch with us or email us at [email address]. We would be
+        delighted to work with you and are eager to respond to your inquiries."</p>
+    </div>
+    <div class="sec1-rightCol">
+      <div class="contact-form">
+        <form id="contactForm" onsubmit="return showAlert()" method="post">
+          <p id="Contact_us">Contact Us</p>
+          <div class="contact_row">
+            <input type="text" id="name" name="name" required placeholder="First Name">
+
+            <input type="text" id="name" name="name" required placeholder="Last Name">
+          </div>
+
+          <div class="contact_row">
+            <input type="tel" id="phone" name="phone" required placeholder="Phone">
+
+            <input type="email" id="email" name="email" required placeholder="Email">
+          </div>
+
+          <textarea id="message" name="message" rows="2" required placeholder="Message"></textarea>
+          <button class="submit_btn" type="submit" onclick="submitForm()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- section_one ended -->
+  <!-- section 2 started -->
+  <div class="section2">
+    <div class="box">
+      <img src="email.png" alt="">
+      <div class="box-content">
+        <p>Email</p>
+        <a href="mailto:missionawareness21@gmail.com">missionawareness21@gmail.com</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="mobile.png" alt="">
+      <div class="box-content">
+        <p>Phone</p>
+        <a href="tel:+919004417626">+91 9004417626</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="location.png" alt="">
+      <div class="box-content">
+        <p>Address</p>
+        <a href="https://www.google.com/maps?q=123+Main+Street,+Springfield,+USA" target="_blank">Lokmanya Tilak Nagar
+          90 Feet Road, Sakinaka Mumbai 400072
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- section 2 ended -->
+  <!-- section 3 started -->
+  <div class="section3">
+    <div class="sec3-leftCol">
+      <p id="visit">Visit our office!</p>
+      <p id="visit-para">Praesent sapien lacus, molestie vitae arcu in, elementum congue justo. Aeneanaliquam semper velit eu pretium.
+        Suspendisse mattis luctus quam nec vehicula.
+        Donec scelerisque tristique metus a vestibulum.</p>
+      <button>GET DIRECTIONS</button>
+    </div>
+    <div class="sec3-rightCol">
+      <p id="hours">HOURS</p>
+      <div class="weekdays">
+        <p class="day">Monday - Friday</p>
+        <p class="time"> 9am - 5pm</p>
+      </div>
+      <div class="weekdays">
+        <p class="day">Saturday</p>
+        <p class="time"> 11am - 5pm</p>
+      </div>
+      <div class="weekdays">
+        <p class="day">Sunday</p>
+        <p class="time"> 9am - 3pm</p>
+      </div>
+    </div>
+  </div>
+  <!-- section 3 ended  -->
+
+  <!-- Footer starts -->
+  <div class="main-footer">
+    <div class="footer">
+      <div class="footer-content-column1">
+        <div class="menu-circle">
+          <div id="circle"></div>
+          <div class="menu">Menu</div>
+        </div>
+        <div class="footer-content-row1">
+          <a href="About page/about.html">
+            <div>About</div>
+          </a>
+          <a href="OurTeam page/team.html">
+            <div>Our Team</div>
+          </a>
+          <a href="contact.html">
+            <div>Contact Us</div>
+          </a>
+          <a href="Donate page/donate.html">
+            <div>Donate Now</div>
+          </a>
+        </div>
+      </div>
+      <div class="footer-content-column2">
+        <div class="contact-circle">
+          <div id="circle"></div>
+          <div class="menu">Contact crise</div>
+        </div>
+        <div id="response">Response 24/7</div>
+        <div id="mob-num">+91 9004417626</div>
+      </div>
+      <div class="footer-content-column3">
+
+        <div class="Maarc-circle">
+          <div id="circle"></div>
+          <div class="menu">Inside Maarc</div>
+        </div>
+        <div id="voter">Voter address e-mail <span id="arrow-svg"><img src="assets/arrow_forward.svg" alt=""></span>
+        </div>
+        <div id="address">#11, New Modern Society,Lokmanya Tilak Nagar <br>
+          90 Feet Road, Sakinaka, Mumbai 400072</div>
+        <hr id="hr">
+        <div class="follow-news">
+          <div id="follow-news">Follow our news</div>
+          <div class="svgs">
+            <a href=""> <img src="Vector (1).svg" alt=""></a>
+            <a href="https://www.linkedin.com/company/mission-awareness-foundation/"><img id="middle-svg"
+                src="in.svg.svg" alt=""></a>
+            <a href="https://www.instagram.com/mission_awareness/"><img src="Vector.svg" alt=""></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <img id="footer-image" src="Link → logo.png.png" alt="">
+    </div>
+    <h1 id="last-line">“The bringing of positive change”</h1>
+    <hr id="last-line-hr">
+    <div id="below-hr">© 2023 MAF</div>
+  </div>
+  </div>
+
+  <!-- Footer ends  -->
+
+
+  <!-- javascript code for navbar starts  -->
+  <script>
+    const toggleBtn = document.querySelector(".toggle-btn");
+    const toggleBtnIcon = document.querySelector(".toggle-btn i");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const menuItems = document.querySelectorAll(".dropdown-menu li a");
+
+    function closeDropdown() {
+      dropdownMenu.classList.remove("display");
+      toggleBtnIcon.classList = 'fa-solid fa-bars';
+    }
+
+    toggleBtn.onclick = function () {
+      dropdownMenu.classList.toggle("display");
+      const isDisplay = dropdownMenu.classList.contains("display");
+      toggleBtnIcon.classList = isDisplay ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    }
+
+    menuItems.forEach(item => {
+      item.addEventListener("click", function () {
+        closeDropdown();
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!event.target.closest(".dropdown-menu") && !event.target.closest(".toggle-btn")) {
+        closeDropdown();
+      }
+    });
+
+    dropdownMenu.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  </script>
+  <!-- javascript code for navbar ends  -->
+
+</body>
+
+</html>
